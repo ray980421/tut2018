@@ -1,8 +1,13 @@
-<?php
+﻿<?php
 $a = "預設值";
-if(!isset($_GET['xxx'])){
-	echo "設定預設值xxx";
-}else{
-	$a = $_GET['xxx'];
+if(!isset($_GET['aa']) ||!isset($_GET['bb'])
+	||!is_numeric($_GET['aa'])
+    ||!is_numeric($_GET['bb']) ){
+	echo "參數不正確";
+	exit;
 }
-echo "tut2!";
+	$x = $_GET['aa'];
+	$y = $_GET['bb'];
+
+	$z = $x+$y;
+echo $z;
